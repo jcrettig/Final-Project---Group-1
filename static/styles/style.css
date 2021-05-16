@@ -23,6 +23,20 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
+dt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.7em;
+    color: rgb(116, 115, 115);
+}
+dd {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7em;
+    color: #999;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #fff;
