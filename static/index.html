@@ -1,101 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Summary</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Stroke: A Risk Analysis</title>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="Visualizations/Resources/style.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        
+    </head>
+    <body>
 
-    <link rel="stylesheet" href="Visualizations/Resources/style.css">
-</head>
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div id="dismiss">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                </div>
 
-<body>    
-<!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand text-black" href="index.html" >Latitude and Weather</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Plots
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="Visualizations/max_temp.html">Max Temperature</a>
-                            <a class="dropdown-item" href="Visualizations/humidity.html">Humidity</a>
-                            <a class="dropdown-item" href="Visualizations/cloudiness.html">Cloudiness</a>
-                            <a class="dropdown-item" href="Visualizations/wind_speed.html">Wind Speed</a>
-                        </div>
+                <div class="sidebar-header">
+                    <h3>Menu</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Stroke Analyses</p>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Visualizations</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#">Scatter Plots</a></li>
+                            <li><a href="#">Pie Charts</a></li>
+                            <li><a href="#">Risk Meter</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-li
-                        nk" href="Visualizations/comparison.html">Comparison</a>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Resources</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="#">Dataset</a></li>
+                            <li><a href="#">Stroke Information</a></li>
+                            <li><a href="#">PowerPoint</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Visualizations/data.html">Data</a>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!--setting up container, rows, columns, and header/opening paragraph -->
-    <div class="container content">    
-        <div class="row">
-            <div class="col-md-8">
-                <div class="col-md-12">
-                    <h3>Cities' Latititude: A Weather Variable Comparison</h3>
-                    <hr>
-                    <p>For this project, we set out to analyze how a city's latitude 
-                        impacts different aspects of the city's weather.</p> 
-                    
-                    <p>To accomplish this, we used the OpenWeatherApp API to compile a list of 541 cities 
-                        and their associated weather data. 
-                        Weather data collected includes maximum temperature (F), humidity (%), cloudiness (%), 
-                        and wind speed (mph).
-                        Once our city dataset was created, we used MatPlotLib to display the relationships
-                        between latitude and weather variables. Linear regressions were also performed 
-                        on both the north and south hemispheres.</p>
 
-                    <p>Our site includes these analyses and their explications, 
-                        as well as the dataset used to create these analyses.</p>
-                </div>
-            </div>
+            </nav>
 
-            <!--setting up visualizations -->
-            <div class="col-md-4">
-                <div class="col-md-12">
-                    <h3>Visualizations</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-3 col-md-6">
-                            <a href="Visualizations/max_temp.html"><img src="Visualizations/Resources/assets/city_lat_vs_max_temp.png" width="100%"  alt="max temp">
-                            </a> 
-                        </div>
-                        <div class="col-3 col-md-6">
-                            <a href="Visualizations/humidity.html"><img src="Visualizations/Resources/assets/city_lat_vs_humidity.png" width="100%" alt="humidity"></a>
-                        </div>
-                    
-                        <div class="col-3 col-md-6">
-                            <a href="Visualizations/cloudiness.html"><img src="Visualizations/Resources/assets/city_lat_vs_cloudiness.png" width="100%"  alt="cloudiness"></a>
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Open Sidebar</span>
+                            </button>
                         </div>
 
-                        <div class="col-3 col-md-6">
-                            <a href="Visualizations/wind_speed.html"><img src="Visualizations/Resources/assets/city_lat_vs_wind_speed.png"width="100%"  alt="wind speed"></a>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
+                </nav>
+
+                <h2>About Strokes</h2>
+                <p>"Stroke is a disease that affects the arteries leading to and within the brain. It is the No. 5 cause of death and a leading cause of disability in the United States.</p>
+                <p>A stroke occurs when a blood vessel that carries oxygen and nutrients to the brain is either blocked by a clot or bursts (or ruptures). When that happens, part of the brain cannot get the blood (and oxygen) it needs, so it and brain cells die." <a style="color:blue;" href="https://www.stroke.org/en/about-stroke"><sup>[1]</sup></a></p>
+
+                <div class="line"></div>
+
+                <h2>About Our Project</h2>
+                <p>Our team set out to determine what factors might make an individual more likely to have a stroke. Using a health dataset with stroke indicators<a style="color:blue;" href="https://www.kaggle.com/fedesoriano/stroke-prediction-dataset"><sup>[2]</sup></a>, we employed machine learning to analyze the variables to ascertain how they each contribute to stroke risk. Using our analyses, we then deployed our findings onto this website. Using the sidebar toggle, you can find our visualizations, resources related to our project, and information about the creators.</p>
+
             </div>
         </div>
-    </div>
-    
-</body>
+
+
+
+        <div class="overlay"></div>
+
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#dismiss, .overlay').on('click', function () {
+                    $('#sidebar').removeClass('active');
+                    $('.overlay').fadeOut();
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').addClass('active');
+                    $('.overlay').fadeIn();
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+    </body>
 </html>
