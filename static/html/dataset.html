@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Stroke: A Risk Analysis</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="../styles/style.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div id="dismiss">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                </div>
+
+                <div class="sidebar-header">
+                    <h3>Menu</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Visualizations</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="scatterPlots.html">Scatter Plots</a></li>
+                            <li><a href="pieCharts.html">Pie Charts</a></li>
+                            <li><a href="riskMeter.html">Risk Meter</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Resources</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="dataset.html">Dataset</a></li>
+                            <li><a href="strokeInfo.html">Stroke Information</a></li>
+                            <li><a href="PP.html">PowerPoint</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Open Sidebar</span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="../index.html">Home</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <h2>Stroke Prediction Dataset</h2>
+                <p><a style="color:rgb(68, 68, 173);" href="https://storage.googleapis.com/kagglesdsdata/datasets/1120859/1882037/healthcare-dataset-stroke-data.csv?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20210516%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210516T223542Z&X-Goog-Expires=259199&X-Goog-SignedHeaders=host&X-Goog-Signature=4e4528aeaf0ac7950913f16fc29444a51ea2941648f05ea2bd24009368b65d2462273fd8a74ff0530535dafc00b32606b9e409558d37a0f7389aa523616d2727b65d06a986d0f1e442c8843b76b2c30385f7a859338eec5d871935c5dcece936ae6afcb3f57ae3992c501f1a866e520b236fb922b1b8bb8bbc20ed6b6ab128fda98960efc1c6b56901c17c7e0eac44602d7e6c6dd55d25fb883dc74c8335ca81d2688521dc6faaebd7129c5154827824c37221ad1e2247f6fc680bb568340f1b9c9936c2d6a08cfa299b4fe7d73fb91aa0493f9c0c69109f795795372c3ebc1177a767804096feb1e82d367072e2a4697a3430f8f9a12c9f21380106a1c1be50" download="healthcare-dataset-stroke-data.csv">Download Dataset</a></p>
+                <p>Our data was found and is made available to the public for educational purposes through the online data science community <a style="color:rgb(68, 68, 173);" href="https://www.kaggle.com/">Kaggle</a>. You can download the CSV directly using the download link above. The Kaggle page containing the dataset is referenced and linked below.</p>
+                
+                <div class="line"></div>
+                <p style="text-decoration: underline;">References</p>
+                <p>fedesoriano. (2021, January). Stroke Prediction Dataset, Version 1. Retrieved May 11, 2021 from <a style="color:rgb(68, 68, 173);" href="https://www.kaggle.com/fedesoriano/stroke-prediction-dataset/version/1">https://www.kaggle.com/fedesoriano/stroke-prediction-dataset/version/1</a>.</p>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="overlay"></div>
+
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#dismiss, .overlay').on('click', function () {
+                    $('#sidebar').removeClass('active');
+                    $('.overlay').fadeOut();
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').addClass('active');
+                    $('.overlay').fadeIn();
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+    </body>
+</html>
