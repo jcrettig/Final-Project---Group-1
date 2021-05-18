@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Stroke: A Risk Analysis</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="../../static/styles/style.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div id="dismiss">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                </div>
+
+                <div class="sidebar-header">
+                    <h3>Menu</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Visualizations</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="../scatterPlots.html">Scatter Plots</a></li>
+                            <li><a href="../donutCharts.html">Donut Charts</a></li>
+                            <li><a href="../riskMeter.html">Risk Meter</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Resources</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="../dataset.html">Dataset</a></li>
+                            <li><a href="../strokeInfo.html">Stroke Information</a></li>
+                            <li><a href="../PP.html">PowerPoint</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Open Sidebar</span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="../../index.html">Home</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="col-md-12">
+                            <h2>Hypertension Donut Chart</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="col-md-12">
+                            <h2>More Donut Charts</h2>
+                            <hr>
+                            <div class="row">
+                                <div class="col-3 col-md-6">
+                                    <h3 class="text-center">Sex</h3>
+                                    <a href="sexDonut.html"><img src="" width="100%" alt="Sex"></a>
+                                </div>
+
+                                <div class="col-3 col-md-6">
+                                    <h3 class="text-center">Employment</h3>
+                                    <a href="workDonut.html"><img src=""width="100%"  alt="Employment"></a>
+                                </div>
+
+                                <div class="col-3 col-md-6">
+                                    <h3 class="text-center">Marriage Status</h3>
+                                    <a href="marryDonut.html"><img src=""width="100%"  alt="Marriage"></a>
+                                </div>
+
+                                <div class="col-3 col-md-6">
+                                    <h3 class="text-center">Residential Area</h3>
+                                    <a href="homeDonut.html"><img src=""width="100%"  alt="Marriage"></a>
+                                </div>
+
+                                <div class="col-3 col-md-6">
+                                    <h3 class="text-center">Hypertension</h3>
+                                    <a href="hypertensionDonut.html"><img src=""width="100%"  alt="Hypertension"></a>
+                                </div>
+
+                                <div class="col-3 col-md-6">
+                                    <h3 class="text-center">Heart Disease</h3>
+                                    <a href="heartDonut.html"><img src=""width="100%"  alt="Heart Disease"></a>
+                                </div>
+
+                                <div class="col-3 col-md-6">
+                                    <h3 class="text-center">Smoking</h3>
+                                    <a href="smokeDonut.html"><img src=""width="100%"  alt="Smoking"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+        <div class="overlay"></div>
+
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#dismiss, .overlay').on('click', function () {
+                    $('#sidebar').removeClass('active');
+                    $('.overlay').fadeOut();
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').addClass('active');
+                    $('.overlay').fadeIn();
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+    </body>
+</html>
