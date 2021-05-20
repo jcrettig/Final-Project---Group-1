@@ -78,17 +78,78 @@
 
                 <h2>Scatter Plots</h2>
                 <p>On this page, you can use the drop-down boxes to select variables for both the x- and y- axes. This can be used to explore the different relationships found within the dataset.</p>
-                
-                <div class="line"></div>
+
+                <div class="jumbotron container p-5 mt-3">
+                    <h1 class="display-4">Stroke Scatter Plots</h1>
+                    <hr class="my-4">
+                    <div class="col-lg-2 text-lg-right">
+                           <p class="mt-2">X-Axis:</p>
+                        </div>
+                        <div class="col-lg-10 pr-lg-5">
+                            <select class="form-control my-1" id="x-selector-dropdown">
+                                <option href="#" class="dropdown-item" value="gender">Gender</option>
+                                <option href="#" class="dropdown-item" value="age">Age</option>
+                                <option href="#" class="dropdown-item" value="hypertension">Hypertension</option>
+                                <option href="#" class="dropdown-item" value="heart_disease	">Heart Disease</option>
+                                <option href="#" class="dropdown-item" value="ever_married">Ever Married</option>
+                                <option href="#" class="dropdown-item" value="work_type">Work Type</option>
+                                <option href="#" class="dropdown-item" value="Residence_type">Residence Type</option>'
+                                <option href="#" class="dropdown-item" value="avg_glucose_level">Average Glucose Level</option>
+                                <option href="#" class="dropdown-item" value="bmi">BMI</option>
+                                <option href="#" class="dropdown-item" value="smoking_status">Smoking Status</option>
+                                <option href="#" class="dropdown-item" value="stroke">Stroke</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 text-lg-right">
+                            <p class="mt-2">Y-Axis:</p>
+                        </div>
+                        <div class="col-lg-10 pr-lg-5">
+                            <select class="form-control my-1" id="y-selector-dropdown">
+                                <option href="#" class="dropdown-item" value="gender">Gender</option>
+                                <option href="#" class="dropdown-item" value="age">Age</option>
+                                <option href="#" class="dropdown-item" value="hypertension">Hypertension</option>
+                                <option href="#" class="dropdown-item" value="heart_disease	">Heart Disease</option>
+                                <option href="#" class="dropdown-item" value="ever_married">Ever Married</option>
+                                <option href="#" class="dropdown-item" value="work_type">Work Type</option>
+                                <option href="#" class="dropdown-item" value="Residence_type">Residence Type</option>'
+                                <option href="#" class="dropdown-item" value="avg_glucose_level">Average Glucose Level</option>
+                                <option href="#" class="dropdown-item" value="bmi">BMI</option>
+                                <option href="#" class="dropdown-item" value="smoking_status">Smoking Status</option>
+                                <option href="#" class="dropdown-item" value="stroke">Stroke</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!-- IMDb Scatter Plot Button -->
+                    <div class="row mt-3">
+                        <div class="col-lg-3">
+                        </div>
+                        <div class="col-lg-7 text-lg-right pt-2">
+                            <p>Submit your choices to see the results below!</p>
+                        </div>
+                        <div class="col-lg-2 text-lg-left">
+                            <button class="btn btn-primary" type="submit" id="submitBtn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Scatter Plot -->
+                <div class="container-fluid container-lg text-center px-lg-5">
+                    <h3 class="py-3" id="plot-title">Scatter Plots</h3>
+                    <div id="plot" class="center" style="height: 500px; width: 900px"></div>
+                </div>
+                <!--<div class="line"></div>-->
 
             </div>
         </div>
 
-
-
         <div class="overlay"></div>
-
-
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"></script>
+        <script src="../static/scripts/plot.js"></script>
+        <!-- AnyChart -->
+        <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-pie.min.js"></script>
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <!-- Bootstrap Js CDN -->
@@ -114,6 +175,7 @@
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
             });
+            
         </script>
     </body>
 </html>

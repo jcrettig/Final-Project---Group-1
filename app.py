@@ -17,6 +17,8 @@ Base = declarative_base()
 
 from flask import Flask, jsonify
 
+from flask_cors import CORS
+
 #################################################
 # Database Setup
 #################################################
@@ -36,7 +38,7 @@ stroke = Base.classes.stroke
 # Flask Setup
 #################################################
 app = Flask(__name__)
-
+CORS(app)
 #################################################
 # Flask Routes
 #################################################
