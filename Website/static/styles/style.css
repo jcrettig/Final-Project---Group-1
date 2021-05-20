@@ -37,7 +37,7 @@ dd {
 
 .navbar {
     padding: 15px 10px;
-    background: rgb(200, 239, 248);
+    background: rgb(219, 241, 247);
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
@@ -192,4 +192,10 @@ a.article, a.article:hover {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
