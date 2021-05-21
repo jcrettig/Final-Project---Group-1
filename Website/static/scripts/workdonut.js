@@ -8,20 +8,20 @@ const stroke = "http://127.0.0.1:5000/api/v1.0/stroke_1"
 var donutLoad = (defaultDonut => {
   d3.json(stroke).then(data => {
 
-    // set default movie title
-    var searchStroke = 'Male';
-
-    var total = data.gender.length
-
     // filter through data to find title
-    var genderMale = data.gender.filter(sex => sex === searchStroke).length
+    var private = data.work_type.filter(work => work === "Private").length
+
+    var self_employed = data.work_type.filter(work => work === "Self-employed").length
     
-    var genderData = [
-      {x: "Male", value: genderMale},
-      {x: "Female", value: total - genderMale}
+    var government = data.work_type.filter(work => work === "Govt_job").length
+
+    var workData = [
+      {x: "Private Employer", value: private},
+      {x: "Self Employed", value: self_employed},
+      {x: "Government Job", value: government}
     ]
     // create pie chart, set data
-    chart = anychart.pie(genderData);
+    chart = anychart.pie(workData);
 
     /* set the inner radius(to turn the pie chart into a doughnut chart)*/
     chart.innerRadius("50%");
@@ -37,7 +37,7 @@ var donutLoad = (defaultDonut => {
 
     // create and configure a label
     var label = anychart.standalones.label();
-    label.text("Sex");
+    label.text("Employment");
     label.width("100%");
     label.height("100%");
     label.fontColor("#60727b");

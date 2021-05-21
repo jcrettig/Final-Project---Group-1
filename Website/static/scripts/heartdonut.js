@@ -9,19 +9,19 @@ var donutLoad = (defaultDonut => {
   d3.json(stroke).then(data => {
 
     // set default movie title
-    var searchStroke = 'Male';
+    var searchStroke = 1;
 
-    var total = data.gender.length
+    var total = data.heart_disease.length
 
     // filter through data to find title
-    var genderMale = data.gender.filter(sex => sex === searchStroke).length
-    
-    var genderData = [
-      {x: "Male", value: genderMale},
-      {x: "Female", value: total - genderMale}
+    var heartdiseaseYes = data.heart_disease.filter(heart => heart === searchStroke).length  
+
+    var heartData = [
+      {x: "Yes", value: heartdiseaseYes},
+      {x: "No", value: total - heartdiseaseYes}
     ]
     // create pie chart, set data
-    chart = anychart.pie(genderData);
+    chart = anychart.pie(heartData);
 
     /* set the inner radius(to turn the pie chart into a doughnut chart)*/
     chart.innerRadius("50%");
@@ -37,7 +37,7 @@ var donutLoad = (defaultDonut => {
 
     // create and configure a label
     var label = anychart.standalones.label();
-    label.text("Sex");
+    label.text("Heart Disease");
     label.width("100%");
     label.height("100%");
     label.fontColor("#60727b");
