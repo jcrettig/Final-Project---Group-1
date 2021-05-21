@@ -23,7 +23,7 @@ var donutLoadStroke = (donut => {
       {x: "No", value: strokeLength - strokeYes}
     ];
 
-    // create pie chart, set data
+    // create pichart, set data
     chart = anychart.pie(heartData);
 
     /* set the inner radius(to turn the pie chart into a doughnut chart)*/
