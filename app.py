@@ -15,42 +15,42 @@ from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 from flask_cors import CORS
 
-#################################################
-# Database Setup
-#################################################
-engine = create_engine("postgresql://postgres:postgres@localhost:5432/stroke2_db")             
-# reflect an existing database into a new model
-Base = automap_base()
-# reflect the tables
-Base.prepare(engine, reflect=True)
+import os
 
 # view dataframe
 # stroke_df = pd.read_sql_table('stroke', engine)               
 # print (stroke_df)       
-
-stroke = Base.classes.stroke   
 
 #################################################
 # Flask Setup
 #################################################
 app = Flask(__name__)
 CORS(app)
+db_url = os.environ.get('DATABASE_URL', '') or "postgresql://postgres:postgres@localhost:5432/stroke2_db"
+
+
+#################################################
+# Database Setup
+#################################################
+engine = create_engine(db_url)             
+# reflect an existing database into a new model
+Base = automap_base()
+# reflect the tables
+Base.prepare(engine, reflect=True)
+
+stroke = Base.classes.stroke 
+
 #################################################
 # Flask Routes
 #################################################
-
 @app.route("/")
 def home():
     """List all available api routes."""
-    return (
-        f"Available Routes:<br/>"                                       
-        f"/api/v1.0/stroke_1<br/>"  
-        f"/api/v1.0/stroke_2<br/>"      
-    )
+    return render_template('index.html')
 
 @app.route("/api/v1.0/stroke_1")
 def stroke1_route():   
