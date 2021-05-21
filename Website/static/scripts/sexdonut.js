@@ -1,41 +1,41 @@
 // Variable set up
 // donut
-const strokeDonut = "http://127.0.0.1:5000/api/v1.0/stroke_2"
+const stroke = "http://127.0.0.1:5000/api/v1.0/stroke_1"
 
 // var buttonDonut = d3.select("#submitBtnDonut") 
 // var plotDonut = d3.select("#plotDonut")
 
 // Change Title Case
-// function toTitleCase(str) {
-  //str = str.replace("_", " ")
-  //return str.replace(/\w\S*/g, function(txt){
-      //return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  //});
-//}
+function toTitleCase(str) {
+  str = str.replace("_", " ")
+  return str.replace(/\w\S*/g, function(txt){
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
 
 // Render original charts
 
 // Default Donut Chart
 var donutLoad = (defaultDonut => {
-  d3.json(imdbDonut).then(data => {
+  d3.json(stroke).then(data => {
 
     // set default movie title
-    var searchMovie = 'black panther';
+    var searchStroke = 'gender';
 
     // filter through data to find title
-    var movieTitle = data.filter(movie => movie.title === searchMovie)
+    var genderCount = data.filter(sex => sex.gender === searchStroke)
     
     // grab USA and world gross for title, adjust totals
-    var movieUSA = movieTitle[0]['usa_gross']
-    var movieWorld = movieTitle[0]['world_gross']
-    var movieWorldAdjust = movieWorld - movieUSA
+    var genderMale = genderCount[0]['Male']
+    var genderFemale = genderCount[0]['Female']
+    // var movieWorldAdjust = movieWorld - movieUSA
 
-    var movieData = [
-      {x: "USA Gross", value: movieUSA},
-      {x: "World Gross", value: movieWorldAdjust}
+    var genderData = [
+      {x: "Male", value: genderMale},
+      {x: "Female", value: genderFemale}
     ]
     // create pie chart, set data
-    chart = anychart.pie(movieData);
+    chart = anychart.pie(genderData);
 
     /* set the inner radius(to turn the pie chart into a doughnut chart)*/
     chart.innerRadius("50%");
@@ -51,7 +51,7 @@ var donutLoad = (defaultDonut => {
 
     // create and configure a label
     var label = anychart.standalones.label();
-    label.text("Black Panther");
+    label.text("Sex");
     label.width("100%");
     label.height("100%");
     label.fontColor("#60727b");

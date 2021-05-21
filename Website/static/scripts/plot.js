@@ -20,7 +20,7 @@ var scatterLoad = (defaultScatter => {
     var xAxis = data.age
     var yAxis = data.avg_glucose_level
 
-    var title = data.id
+    var title = data.stroke
 
     var xTitle = `Age`
     var yTitle =  `Average Glucose Level`
