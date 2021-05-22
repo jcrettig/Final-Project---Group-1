@@ -30,7 +30,9 @@ import os
 #################################################
 app = Flask(__name__)
 CORS(app)
-db_url = os.environ.get('SQLALCHEMY_DATABASE_URI') or "postgresql://postgres:postgres@localhost:5432/stroke2_db"
+db_url = os.environ['DATABASE_URL'] or "postgresql://postgres:postgres@localhost:5432/stroke2_db"
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
 
 
 #################################################
