@@ -95,5 +95,33 @@ def stroke2_route():
 def about():
     return render_template('about.html')
 
+@app.route("/ML")
+def ml():
+    return render_template('ML.html')
+
+@app.route("/scatterPlots")
+def scatterplots():
+    return render_template('scatterPlots.html')
+
+@app.route("/donutCharts")
+def donutCharts():
+    return render_template('donutCharts.html')
+
+@app.route("/riskMeter")
+def riskMeter():
+    return render_template('riskMeter.html')
+
+@app.route("/dataset")
+def dataset():
+    return render_template('dataset.html')
+
+@app.route("/strokeInfo")
+def strokeInfo():
+    return render_template('strokeInfo.html')
+
+@app.route("/PP")
+def PP():
+    return render_template('PP.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
