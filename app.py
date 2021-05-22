@@ -120,8 +120,16 @@ def strokeInfo():
     return render_template('strokeInfo.html')
 
 @app.route("/PP")
-def PP():
+def PP ():
     return render_template('PP.html')
+
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
+
+@app.route("/heartDonut")
+def heartDonut():
+    return render_template('heartDonut.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
