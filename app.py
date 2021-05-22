@@ -30,7 +30,9 @@ import os
 #################################################
 app = Flask(__name__)
 CORS(app)
-db_url = os.environ.get('SQLALCHEMY_DATABASE_URI') or "postgresql://postgres:postgres@localhost:5432/stroke2_db"
+db_url = os.environ['DATABASE_URL'] or "postgresql://postgres:postgres@localhost:5432/stroke2_db"
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
 
 
 #################################################
@@ -88,6 +90,63 @@ def stroke2_route():
         stroke_results.append(stroke_dict)
 
     return jsonify(stroke_results)  
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
+@app.route("/ML")
+def ml():
+    return render_template('ML.html')
+
+@app.route("/donutCharts")
+def donutCharts():
+    return render_template('donutCharts.html')
+
+@app.route("/dataset")
+def dataset():
+    return render_template('dataset.html')
+
+@app.route("/strokeInfo")
+def strokeInfo():
+    return render_template('strokeInfo.html')
+
+@app.route("/PP")
+def PP():
+    return render_template('PP.html')
+
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
+
+@app.route("/heartDonut")
+def heartDonut():
+    return render_template('heartDonut.html')
+
+@app.route("/homeDonut")
+def homeDonut():
+    return render_template('homeDonut.html')
+
+@app.route("/hypertensionDonut")
+def hypertensionDonut():
+    return render_template('hypertensionDonut.html')
+
+@app.route("/marryDonut")
+def marryDonut():
+    return render_template('marryDonut.html')
+
+@app.route("/sexDonut")
+def sexDonut():
+    return render_template('sexDonut.html')
+
+@app.route("/smokeDonut")
+def smokeDonut():
+    return render_template('smokeDonut.html')
+
+@app.route("/workDonut")
+def workDonut():
+    return render_template('workDonut.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

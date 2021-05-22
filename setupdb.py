@@ -23,7 +23,11 @@ stroke_df.sort_values(by="age", ascending=True)
 #Export file as csv, without Panda's index, but with the header
 stroke_df.to_csv("DataG/etl_stroke_dataset.csv", index=False, header=True)
 
-engine = create_engine(os.environ.get('SQLALCHEMY_DATABASE_URI'))
+db_url = os.environ['DATABASE_URL'] or "postgresql://postgres:postgres@localhost:5432/stroke2_db"
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
+
+engine = create_engine(db_url)
 conn = engine.connect()
 
 stroke_df.to_sql('stroke',con=engine, index=False, if_exists='replace')

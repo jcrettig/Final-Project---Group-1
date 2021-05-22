@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "C:\\Users\\rtear\\anaconda3\\envs\\PythonData\\python.exe"
+=======
+    "python.pythonPath": "/Users/chrisballard/opt/anaconda3/envs/deploy_env/bin/python"
+>>>>>>> 603e233cc130cb5a79a1e06573f691b7186a5feb
 }

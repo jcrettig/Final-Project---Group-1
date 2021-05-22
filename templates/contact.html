@@ -10,7 +10,7 @@
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="static/styles/style.css">
+        <link rel="stylesheet" href="../static/styles/style.css">
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
         
@@ -32,30 +32,31 @@
                     <li class="active">
                         <a href="#plotSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Visualizations</a>
                         <ul class="collapse list-unstyled" id="plotSubmenu">
-                            <li><a href="html/scatterPlots.html">Scatter Plots</a></li>
-                            <li><a href="html/donutCharts.html">Donut Charts</a></li>
-                            <li><a href="html/riskMeter.html">Risk Meter</a></li>
+                            <li><a href="/scatterPlots">Scatter Plots</a></li>
+                            <li><a href="/donutCharts">Donut Charts</a></li>
+                            <li><a href="/riskMeter">Risk Meter</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#resourceSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Resources</a>
                         <ul class="collapse list-unstyled" id="resourceSubmenu">
-                            <li><a href="html/dataset.html">Dataset</a></li>
-                            <li><a href="html/strokeInfo.html">Stroke Information</a></li>
-                            <li><a href="html/PP.html">PowerPoint</a></li>
+                            <li><a href="/dataset">Dataset</a></li>
+                            <li><a href="/strokeInfo">Stroke Information</a></li>
+                            <li><a href="/PP">PowerPoint</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
                         <ul class="collapse list-unstyled" id="aboutSubmenu">
-                            <li><a href="html/ML.html">Machine Learning</a></li>
-                            <li><a href="html/about.html">Our Team</a></li>
+                            <li><a href="/ML">Machine Learning</a></li>
+                            <li><a href="/about">Our Team</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="html/contact.html">Contact</a>
+                        <a href="/contact">Contact</a>
                     </li>
                 </ul>
+
 
             </nav>
 
@@ -72,12 +73,11 @@
                             </button>
                         </div>
 
-                        
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    <a href="index.html">
-                                        <img src="static/images/homeIconBlue.png" width="50" height="50" class="d-inline-block align-top" alt="home">
+                                    <a href="/">
+                                        <img src="../static/images/homeIconBlue.png" width="50" height="50" class="d-inline-block align-top" alt="home">
                                     </a>
                                 </li>
                             </ul>
@@ -85,32 +85,53 @@
                     </div>
                 </nav>
 
-                <div class="row"> 
-                    <div class="col-md-8">
-                        <div class="col-md-12">
-                            <h2>About Strokes</h2>
-                            <p>"Stroke is a disease that affects the arteries leading to and within the brain. It is the No. 5 cause of death and a leading cause of disability in the United States.</p>
-                            <p>A stroke occurs when a blood vessel that carries oxygen and nutrients to the brain is either blocked by a clot or bursts (or ruptures). When that happens, part of the brain cannot get the blood (and oxygen) it needs, so it and brain cells die." <a style="color:rgb(56, 56, 228);" href="https://www.stroke.org/en/about-stroke"><sup>[1]</sup></a></p>
-                            <p>More information can be found <a style="color: rgb(56, 56, 228);" href="html/strokeInfo.html"> here</a>.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="static/images/brainImage.jpg" width="100%" alt="F.A.S.T."></img>
-                        <p>(Jolygon/iStock, Getty Images)</p>
-                    </div>
-                </div>
-
+                <h2>Our Team</h2>
+                <p>Our team is comprised of 6 individuals from the Butler University Data Visualization Boot Camp:</p>
+            
                 <div class="line"></div>
 
-                <h2>About Our Project</h2>
-                <p>Our team set out to determine what factors might make an individual more likely to have a stroke. Using a health dataset with stroke indicators<a style="color: rgb(56, 56, 228);" href="https://www.kaggle.com/fedesoriano/stroke-prediction-dataset"><sup>[2]</sup></a>, we employed machine learning to analyze the variables to ascertain how they each contribute to stroke risk. Using our analyses, we then deployed our findings onto this website. Using the sidebar toggle located at the top of the page, you can navigate to our visualizations, resources related to our project, and information about the creators.</p>
+                <dl>
+                    <dt>Chris Ballard</dt>
+                    <dd><span style="color:rgb(84, 84, 104);">Project Accomplishments: </span>Heroku, Python</dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Coding Strengths/Enjoyments: </span></dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Github: </span></dd>
+                    
+                    <div class="line"></div>
+                
+                    <dt>Emily Cruz</dt>
+                    <dd><span style="color:rgb(84, 84, 104);">Project Accomplishments: </span>Python, scikit-learn; Decision Trees, Logistic Regression</dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Coding Strengths/Enjoyments: </span></dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Github: </span><a style="color:rgb(56, 56, 228);" href="https://github.com/emmybsu">https://github.com/emmybsu</a></dd>
+                    
+                    <div class="line"></div>
 
-                <div class="line"></div>
+                    <dt>Chris Rettig</dt>
+                    <dd><span style="color:rgb(84, 84, 104);">Project Accomplishments: </span>Python, SQL, Postgres, Flask, Bootstrap</dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Coding Strengths/Enjoyments: </span></dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Github: </span><a style="color:rgb(56, 56, 228);" href="https://github.com/jcrettig">https://github.com/jcrettig</a></dd>
 
-                <p style="text-decoration: underline;">References</p>
-                <p><sup>[1]</sup>American Stroke Association. 2021. About Stroke. <a style="color:rgb(56, 56, 228);" href="https://www.stroke.org/en/">https://www.stroke.org/en/</a>.</p>
-                <p><sup>[2]</sup>fedesoriano. (2021, January). Stroke Prediction Dataset, Version 1. Retrieved May 11, 2021 from <a style="color:rgb(56, 56, 228);" href="https://www.kaggle.com/fedesoriano/stroke-prediction-dataset/version/1">https://www.kaggle.com/fedesoriano/stroke-prediction-dataset/version/1</a>.</p>
+                    <div class="line"></div>
 
+                    <dt>Ocean Showers</dt>
+                    <dd><span style="color:rgb(84, 84, 104);">Project Accomplishments: </span>HTML, CSS, JS, Bootstrap, Plotly, D3</dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Coding Strengths/Enjoyments: </span>Front-end development, visualization creation</dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Github: </span><a style="color:rgb(56, 56, 228);" href="https://github.com/oceanshowers3">https://github.com/oceanshowers3</a></dd>
+                    
+                    <div class="line"></div>
+
+                    <dt>Ross Teare</dt>
+                    <dd><span style="color:rgb(84, 84, 104);">Project Accomplishments: </span>HTML, CSS, JS, Plotly, D3</dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Coding Strengths/Enjoyments: </span></dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Github: </span></dd>
+
+                    <div class="line"></div>
+
+                    <dt>Andrea Vaughn</dt>
+                    <dd><span style="color:rgb(84, 84, 104);">Project Accomplishments: </span>Python, scikit-learn; Decision Trees, Logistic Regression</dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Coding Strengths/Enjoyments: </span></dd>
+                    <dd><span style="color:rgb(84, 84, 104);">Github: </span><a style="color:rgb(56, 56, 228);" href="https://github.com/AndreaVaughn">https://github.com/AndreaVaughn</a></dd>
+                    
+                </dl>
             </div>
         </div>
 
