@@ -2,11 +2,11 @@
 
 ### Project Team
 * **Chris Ballard** `Heroku, HTML, JavaScript, Python`
-* **Emily Cruz** `scikit-learn, Decisions Tress, Logistic Regression`
+* **Emily Cruz** `scikit-learn, Decisions Trees, Logistic Regression`
 * **Chris Rettig** `Python, SQL, Flask API, HTML, Boostrap`
 * **Ocean Showers** `HTML, CSS, JavaScript, Bootstrap, Plotly, D3`
 * **Ross Teare** `HTML, CSS, JavaScript, Plotly, D3`
-* **Andrea Vaughn** `scikit-learn, Decisions Tress, Logistic Regression`
+* **Andrea Vaughn** `scikit-learn, Decisions Trees, Logistic Regression`
 
 ### Project Overview
 #### Project Goal
