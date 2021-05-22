@@ -99,17 +99,9 @@ def about():
 def ml():
     return render_template('ML.html')
 
-@app.route("/scatterPlots")
-def scatterplots():
-    return render_template('scatterPlots.html')
-
 @app.route("/donutCharts")
 def donutCharts():
     return render_template('donutCharts.html')
-
-@app.route("/riskMeter")
-def riskMeter():
-    return render_template('riskMeter.html')
 
 @app.route("/dataset")
 def dataset():
@@ -130,6 +122,31 @@ def contact():
 @app.route("/heartDonut")
 def heartDonut():
     return render_template('heartDonut.html')
+
+@app.route("/homeDonut")
+def homeDonut():
+    return render_template('homeDonut.html')
+
+@app.route("/hypertensionDonut")
+def hypertensionDonut():
+    return render_template('hypertensionDonut.html')
+
+@app.route("/marryDonut")
+def marryDonut():
+    return render_template('marryDonut.html')
+
+@app.route("/sexDonut")
+def sexDonut():
+    return render_template('sexDonut.html')
+
+@app.route("/smokeDonut")
+def smokeDonut():
+    return render_template('smokeDonut.html')
+
+@app.route("/workDonut")
+def workDonut():
+    return render_template('workDonut.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
