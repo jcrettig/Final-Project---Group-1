@@ -112,7 +112,7 @@ def strokeInfo():
     return render_template('strokeInfo.html')
 
 @app.route("/PP")
-def PP ():
+def PP():
     return render_template('PP.html')
 
 @app.route("/contact")
