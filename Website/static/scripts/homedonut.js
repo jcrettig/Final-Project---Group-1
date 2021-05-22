@@ -1,8 +1,5 @@
 // Variable set up
-// donut
-const stroke = "http://127.0.0.1:5000/api/v1.0/stroke_1"
-
-// Render original charts
+const stroke = "http://127.0.0.1:5000/api/v1.0/stroke_2"
 
 // Default Donut Chart
 var donutLoad = (defaultDonut => {
