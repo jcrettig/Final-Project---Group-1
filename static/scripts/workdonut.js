@@ -40,7 +40,7 @@ var donutLoadStroke = (donut => {
     chart.connectorStroke({color: "#595959", thickness: 2, dash:"2 2"});
 
     // set the container id
-    chart.container("plotDonut");
+    chart.container("plotDonutStroke");
 
     // create and configure a label
     var label = anychart.standalones.label();
