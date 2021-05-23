@@ -29,7 +29,7 @@ import os
 # Flask Setup
 #################################################
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 db_url = os.environ['DATABASE_URL'] or "postgresql://postgres:postgres@localhost:5432/stroke2_db"
 if db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql://", 1)
@@ -38,7 +38,8 @@ if db_url.startswith("postgres://"):
 #################################################
 # Database Setup
 #################################################
-engine = create_engine(db_url)             
+engine = create_engine(db_url)   
+# engine = create_engine("postgresql://postgres:postgres@localhost:5432/stroke2_db")          
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
