@@ -73,7 +73,7 @@ var donutLoadNull = (donut => {
     var strokeLength = data.filter(count => count.stroke === searchStroke).length
 
     // filter through data to find those without strokes depending on their home location, find length
-    var strokeNo = data.filter(no => no.stroke === searchStroke && yes.Residence_type === searchHome).length
+    var strokeNo = data.filter(no => no.stroke === searchStroke && no.Residence_type === searchHome).length
 
     // calculate and set values for those living in urban and rural areas (w/ stroke)
     var homeData = [
