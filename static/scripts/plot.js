@@ -1,6 +1,7 @@
 // Variable set up
 // Scatter plot 
-const stroke = "http://127.0.0.1:5000/api/v1.0/stroke_1"
+// const stroke = "http://127.0.0.1:5000/api/v1.0/stroke_1"
+const stroke = "/api/v1.0/stroke_1"
 
 var buttonPlot = d3.select("#submitBtn")  
 

@@ -1,5 +1,6 @@
 // API Set Up
-const stroke = "http://127.0.0.1:5000/api/v1.0/stroke_1"
+// const stroke = "http://127.0.0.1:5000/api/v1.0/stroke_1"
+const stroke = "/api/v1.0/stroke_1"
 
 // Stroke Donut Chart
 var donutLoadStroke = (donut => {

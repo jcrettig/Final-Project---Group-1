@@ -91,6 +91,10 @@ def stroke2_route():
 
     return jsonify(stroke_results)  
 
+#################################################
+# Flask Routes to render remaining pages
+#################################################
+
 @app.route("/about")
 def about():
     return render_template('about.html')
