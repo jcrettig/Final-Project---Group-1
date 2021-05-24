@@ -1,145 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Stroke Info PPT</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-    width: 70%;
-    margin: auto;
-  }
-  </style>
-</head>
-<body>
+  <head>
+    <title>Stroke Info PPT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+    }
+    </style>
+  </head>
+  <body>
 
-<div class="container">
-  <br>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval=false>
-    <!-- Indicators -->
-    <!-- <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol> -->
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+          <div id="dismiss">
+              <i class="glyphicon glyphicon-arrow-left"></i>
+          </div>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+          <div class="sidebar-header">
+              <h3>Menu</h3>
+          </div>
 
-      <div class="item active">
-        <img src="../static/ppt/Slide1.JPG" alt="Slide 1" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
+          <ul class="list-unstyled components">
+              <li class="active">
+                  <a href="#plotSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Visualizations</a>
+                  <ul class="collapse list-unstyled" id="plotSubmenu">
+                      <li><a href="/descriptive">Descriptive Comparison</a></li>
+                      <li><a href="/ML">Machine Learning</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#resourceSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Resources</a>
+                  <ul class="collapse list-unstyled" id="resourceSubmenu">
+                      <li><a href="/dataset">Dataset</a></li>
+                      <li><a href="/strokeInfo">Stroke Information</a></li>
+                      <li><a href="/PP">PowerPoint</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="/about">About Our Team</a>
+              </li>
+              <li>
+                  <a href="/contact">Contact</a>
+              </li>
+          </ul>
+
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+
+              <div class="navbar-header">
+                  <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                      <i class="glyphicon glyphicon-align-left"></i>
+                      <span>Open Sidebar</span>
+                  </button>
+              </div>
+
+              
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li>
+                          <a href="/">
+                              <img src="static/images/homeIconBlue.png" width="50" height="50" class="d-inline-block align-top" alt="home">
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+        </nav>
+
+        <div class="container">
+          <br>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval=false>
+            <!-- Indicators -->
+            <!-- <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol> -->
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+        
+              <div class="item active">
+                <img src="../static/ppt/Slide1.JPG" alt="Slide 1" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide2.JPG" alt="Slide 2" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+            
+              <div class="item">
+                <img src="../static/ppt/Slide3.JPG" alt="Slide 3" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide4.JPG" alt="Slide 4" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide5.JPG" alt="Slide 5" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide6.JPG" alt="Slide 6" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide7.JPG" alt="Slide 7" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide8.JPG" alt="Slide 8" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide9.JPG" alt="Slide 9" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide10.JPG" alt="Slide 10" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide11.JPG" alt="Slide 11" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+        
+              <div class="item">
+                <img src="../static/ppt/Slide12.JPG" alt="Slide 12" width="460" height="345">
+                <div class="carousel-caption">
+                  <!-- <h3>Caption Header</h3>
+                  <p>Caption</p> -->
+                </div>
+              </div>
+          
+            </div>
+        
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="item">
-        <img src="../static/ppt/Slide2.JPG" alt="Slide 2" width="460" height="345">
-        <div class="carousel-caption">
-         <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
       </div>
-    
-      <div class="item">
-        <img src="../static/ppt/Slide3.JPG" alt="Slide 3" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide4.JPG" alt="Slide 4" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide5.JPG" alt="Slide 5" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide6.JPG" alt="Slide 6" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide7.JPG" alt="Slide 7" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide8.JPG" alt="Slide 8" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide9.JPG" alt="Slide 9" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide10.JPG" alt="Slide 10" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide11.JPG" alt="Slide 11" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="../static/ppt/Slide12.JPG" alt="Slide 12" width="460" height="345">
-        <div class="carousel-caption">
-          <!-- <h3>Caption Header</h3>
-          <p>Caption</p> -->
-        </div>
-      </div>
-  
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
+    <div class="overlay"></div>
 
-</body>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').fadeOut();
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').fadeIn();
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+  </body>
 </html>

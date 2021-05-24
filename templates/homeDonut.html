@@ -32,9 +32,8 @@
                     <li class="active">
                         <a href="#plotSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Visualizations</a>
                         <ul class="collapse list-unstyled" id="plotSubmenu">
-                            <li><a href="/scatterPlots">Scatter Plots</a></li>
-                            <li><a href="/donutCharts">Donut Charts</a></li>
-                            <li><a href="/riskMeter">Risk Meter</a></li>
+                            <li><a href="/descriptive">Descriptive Comparison</a></li>
+                            <li><a href="/ML">Machine Learning</a></li>
                         </ul>
                     </li>
                     <li>
@@ -46,11 +45,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
-                        <ul class="collapse list-unstyled" id="aboutSubmenu">
-                            <li><a href="/ML">Machine Learning</a></li>
-                            <li><a href="/about">Our Team</a></li>
-                        </ul>
+                        <a href="/about">About Our Team</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>
@@ -86,13 +81,13 @@
                     </div>
                 </nav>
                 <h2>Residential Area Donut Chart</h2>
+                <p>Individuals who live in urban areas appear to be slightly more likely to have a stroke compared to those who live in rural areas. Further analysis would be required to determined whether or not this difference is statistically significant.</p>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="col-md-12">
-                             <!-- Donut Chart -->
-                             <div class="container-fluid container-lg text-center px-lg-5">
+                            <!-- Donut Chart -->
+                            <div class="container-fluid container-lg text-center px-lg-5">
                                 <h3 class="py-3" id="plot-title-donut">Individuals with Stroke History</h3>
-                                <!-- TODO chart size -->
                                 <div id="plotDonutStroke" class="text-center" style="height: 500px; width: 400px"></div>
                             </div>
                         </div>
@@ -102,7 +97,6 @@
                             <!-- Donut Chart -->
                             <div class="container-fluid container-lg text-center px-lg-5">
                                 <h3 class="py-3" id="plot-title-donut">Individuals with No Stroke History</h3>
-                                <!-- TODO chart size -->
                                 <div id="plotDonutNull" class="text-center" style="height: 500px; width: 400px" ></div>
                             </div>
                         </div>

@@ -32,9 +32,8 @@
                     <li class="active">
                         <a href="#plotSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Visualizations</a>
                         <ul class="collapse list-unstyled" id="plotSubmenu">
-                            <li><a href="/scatterPlots">Scatter Plots</a></li>
-                            <li><a href="/donutCharts">Donut Charts</a></li>
-                            <li><a href="/riskMeter">Risk Meter</a></li>
+                            <li><a href="/descriptive">Descriptive Comparison</a></li>
+                            <li><a href="/ML">Machine Learning</a></li>
                         </ul>
                     </li>
                     <li>
@@ -46,11 +45,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
-                        <ul class="collapse list-unstyled" id="aboutSubmenu">
-                            <li><a href="/ML">Machine Learning</a></li>
-                            <li><a href="/about">Our Team</a></li>
-                        </ul>
+                        <a href="/about">About Our Team</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>
@@ -85,14 +80,38 @@
                     </div>
                 </nav>
 
-                <h2>About Machine Learning</h2>
-                <p></p>
-                
+                <div class="row">
+                    <h2>Pre-Analysis</h2>
+                    <p>First, the data was imported into a notebook for data cleanup and analysis.</p>
+                    <p>For data cleanup, we removed the following individuals - 16 and younger; listed sex as neither male nor female (one individual); or if a data element had missing data (BMI). In addition, data was validated to ensure all IDs were unique.</p>
+                    <p>After cleaning the data, <a style="color:rgb(56, 56, 228);" href="/descriptive">charts</a> were generated and machine learning was completed.</p>
+                </div>
+
                 <div class="line"></div>
 
-                <h2>Our Findings</h2>
-                <p></p>
-                
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="col-md-12">
+                            <h2>Decision Tree</h2>
+                            <p>A Decision Tree model was created to understand and predict stroke in the data model.  There was an 88% accuracy for this model after training and testing.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../static/images/regression.png" width="100%" alt="stroke"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="col-md-12">
+                            <h2>Correlation Matrix</h2>
+                            <p>A correlation matrix was created to determine strokes that occurred in the individuals within the data model.  It displays that a contributing factor to stroke is age.  Those that have never worked, worked in a private venue or never smoked have lesser incidence of a stroke with the entire data set.  This is before doing a decision tree separating those that have and have not had a stroke.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../static/images/matrix.png" width="100%" alt="stroke"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
