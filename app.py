@@ -152,6 +152,13 @@ def smokeDonut():
 def workDonut():
     return render_template('workDonut.html')
 
+@app.route("/descriptive")
+def descriptive():
+    return render_template('descriptive.html')
+
+@app.route("/ageBar")
+def ageBar():
+    return render_template('ageBar.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
