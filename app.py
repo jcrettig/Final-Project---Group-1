@@ -197,5 +197,13 @@ def descriptive():
 def ageBar():
     return render_template('ageBar.html')
 
+@app.route("/bmiBar")
+def ageBar():
+    return render_template('bmiBar.html')
+
+@app.route("/glucoseBar")
+def ageBar():
+    return render_template('glucoseBar.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
