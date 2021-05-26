@@ -52,6 +52,7 @@
                     </li>
                 </ul>
 
+
             </nav>
 
             <!-- Page Content Holder -->
@@ -79,33 +80,33 @@
                     </div>
                 </nav>
 
-                <h2>Hypertension Donut Chart</h2>
-                <p>TODO</p>
+                <h2>Glucose Levels Bar Chart</h2>
+                <p>Individuals with stroke history appear to be slightly more likely to have higher glucose levels compared to individuals with no stroke history. Further analysis would be required to determined whether or not this difference is statistically significant.</p>
 
                 <div class="row">
                     <div class="col-md-4">
                         <div class="col-md-12">
-                            <!-- Donut Chart -->
+                            <!-- Bar Chart -->
                             <div class="container-fluid container-lg text-center px-lg-5">
                                 <h3 class="py-3" id="plot-title-donut">Individuals with Stroke History</h3>
-                                <div id="plotDonutStroke" class="text-center" style="height: 500px; width: 400px"></div>
+                                <div id="plotBarStroke" class="text-center" style="height: 500px; width: 400px"></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="col-md-12">
-                            <!-- Donut Chart -->
+                            <!-- Bar Chart -->
                             <div class="container-fluid container-lg text-center px-lg-5">
                                 <h3 class="py-3" id="plot-title-donut">Individuals with No Stroke History</h3>
-                                <div id="plotDonutNull" class="text-center" style="height: 500px; width: 400px" ></div>
+                                <div id="plotBarNull" class="text-center" style="height: 500px; width: 400px" ></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="col-md-12">
-                            <h2>Donut Charts</h2>
+                            <h2>More Info</h2>
                             <hr>
                             <div class="row">
 
@@ -166,16 +167,16 @@
             </div>
         </div>
 
-
-
         <div class="overlay"></div>
 
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <!-- D3 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"></script>
-        <script src="../../static/scripts/hypertensiondonut.js"></script>
+        <!-- JS Script -->
+        <script src="../../static/scripts/glucoseBar.js"></script>
         <!-- AnyChart -->
         <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
-        <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-pie.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-cartesian.min.js"></script>
+
     
 
         <!-- jQuery CDN -->

@@ -44,7 +44,7 @@ var donutLoadStroke = (donut => {
 
     // create and configure a label
     var label = anychart.standalones.label();
-    label.text("Employment");
+    label.text("Work");
     label.width("100%");
     label.height("100%");
     label.fontColor("#60727b");
@@ -104,7 +104,7 @@ var donutLoadNull = (donut => {
 
     // create and configure a label
     var label = anychart.standalones.label();
-    label.text("Employment");
+    label.text("Work");
     label.width("100%");
     label.height("100%");
     label.fontColor("#60727b");

@@ -1,12 +1,12 @@
 // API Set Up
-var stroke = "/api/v1.0/age"
+var stroke = "/api/v1.0/bmi"
 
 // Stroke Bar Chart
 var barLoad = (bar => {
     d3.json(stroke).then(data => {
 
         // set x axis
-        var xAxis = data.Age
+        var xAxis = data.bmi
 
         // set up y axis for those with stroke history
         var yAxisStroke = data.stroke
@@ -26,7 +26,7 @@ var barLoad = (bar => {
         // set layout (use for both charts)
         var layout = {
             xaxis: {
-                title: "Age Ranges"
+                title: "BMI Ranges"
             },
             yaxis: {
                 title: "Count of Individuals"
