@@ -92,6 +92,43 @@ def stroke2_route():
 
     return jsonify(stroke_results)  
 
+age_df = pd.DataFrame(
+    {"Age":[25, 35, 45, 55, 65, 75,85],
+    "nstroke":[440, 608, 681, 771, 699, 452, 416],
+    "stroke":[0, 1, 7, 27,53,57,102]
+    }
+)
+
+@app.route("/api/v1.0/age")
+def age_route():   
+    
+    return jsonify({col:list(age_df[col]) for col in age_df.columns})
+
+bmi_df = pd.DataFrame(
+    {"bmi":[18.5, 25.0, 30.0, 100.0],
+    "nstroke":[39, 854, 1256, 1774],
+    "stroke":[1, 35, 75, 97]
+    }
+)
+
+@app.route("/api/v1.0/bmi")
+def bmi_route():   
+    
+    return jsonify({col:list(bmi_df[col]) for col in bmi_df.columns})
+
+glucose_df = pd.DataFrame(
+    {"glucose":[100, 150, 200, 250, 300],
+    "nstroke":[2498, 962, 236, 351, 20],
+    "stroke":[110, 47, 34, 51, 5]
+    }
+)
+
+@app.route("/api/v1.0/glucose")
+def glucose_route():   
+    
+    return jsonify({col:list(glucose_df[col]) for col in glucose_df.columns})
+
+
 #################################################
 # Flask Routes to render remaining pages
 #################################################
