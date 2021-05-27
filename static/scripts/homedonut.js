@@ -98,7 +98,7 @@ var donutLoadNull = (donut => {
 
     // create and configure a label
     var label = anychart.standalones.label();
-    label.text("Residence Area");
+    label.text("Housing Area");
     label.width("100%");
     label.height("100%");
     label.fontColor("#60727b");
