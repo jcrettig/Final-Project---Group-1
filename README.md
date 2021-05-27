@@ -4,8 +4,8 @@
 * **Chris Ballard** `Heroku, HTML, JavaScript, Python`
 * **Emily Cruz** `scikit-learn, Decisions Trees, Logistic Regression`
 * **Chris Rettig** `Python, SQL, Flask API, HTML, Boostrap`
-* **Ocean Showers** `HTML, CSS, JavaScript, Bootstrap, Plotly, D3`
-* **Ross Teare** `HTML, CSS, JavaScript, Plotly, D3`
+* **Ocean Showers** `HTML, CSS, JavaScript, Bootstrap, Plotly, AnyChart`
+* **Ross Teare** `HTML, CSS, JavaScript, Plotly`
 * **Andrea Vaughn** `scikit-learn, Decisions Trees, Logistic Regression`
 
 ### Project Overview
@@ -25,14 +25,16 @@ Kaggle user Fedesoriano, "Stroke Prediction Dataset"
 5. Decision Tree Classifier
 6. Logistic Regression
 #### Frontend
-1. HTML, CSS, JavaScript
-2. Bootstrap
-3. Plotly
-4. D3
+1. HTML
+2. CSS
+3. JavaScript
+4. Bootstrap
+5. Plotly
+6. AnyChart
 #### Data Manipulation and Analysis
 1. pandas
 2. numpy
-3. patplotlib
+3. matplotlib
 4. jupyter
 
 ### Acknowledgements
